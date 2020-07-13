@@ -1,0 +1,587 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.9.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.9.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B15BEAE-15A8-4F99-8931-7C28B13EB482}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Site</RootNamespace>
+    <AssemblyName>Site</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AreaRestrita\assets\css\bootstrap.css" />
+    <Content Include="AreaRestrita\assets\css\bootstrap.min.css" />
+    <Content Include="AreaRestrita\assets\css\demo.css" />
+    <Content Include="AreaRestrita\assets\css\main.css" />
+    <Content Include="AreaRestrita\assets\img\apple-icon.png" />
+    <Content Include="AreaRestrita\assets\img\favicon.png" />
+    <Content Include="AreaRestrita\assets\img\login-bg.jpg" />
+    <Content Include="AreaRestrita\assets\img\logo-dark.png" />
+    <Content Include="AreaRestrita\assets\img\profile-bg.jpg" />
+    <Content Include="AreaRestrita\assets\img\profile-bg.png" />
+    <Content Include="AreaRestrita\assets\img\user-medium.png" />
+    <Content Include="AreaRestrita\assets\img\user.png" />
+    <Content Include="AreaRestrita\assets\img\user1.png" />
+    <Content Include="AreaRestrita\assets\img\user2.png" />
+    <Content Include="AreaRestrita\assets\img\user3.png" />
+    <Content Include="AreaRestrita\assets\img\user4.png" />
+    <Content Include="AreaRestrita\assets\img\user5.png" />
+    <Content Include="AreaRestrita\assets\scripts\klorofil-common.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\bootstrap-datepicker3.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker3.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker3.min.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.en-AU.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.eo.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ko.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.mn.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\js\npm.js" />
+    <Content Include="AreaRestrita\assets\vendor\chartist\css\chartist-custom.css" />
+    <Content Include="AreaRestrita\assets\vendor\chartist\css\chartist.css" />
+    <Content Include="AreaRestrita\assets\vendor\chartist\css\chartist.min.css" />
+    <Content Include="AreaRestrita\assets\vendor\chartist\js\chartist.js" />
+    <Content Include="AreaRestrita\assets\vendor\chartist\js\chartist.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="AreaRestrita\assets\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="AreaRestrita\assets\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="AreaRestrita\assets\vendor\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="AreaRestrita\assets\vendor\jquery-slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\jquery.easy-pie-chart\angular.easypiechart.js" />
+    <Content Include="AreaRestrita\assets\vendor\jquery.easy-pie-chart\angular.easypiechart.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\jquery.easy-pie-chart\easypiechart.js" />
+    <Content Include="AreaRestrita\assets\vendor\jquery.easy-pie-chart\easypiechart.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\jquery.easy-pie-chart\jquery.easypiechart.js" />
+    <Content Include="AreaRestrita\assets\vendor\jquery.easy-pie-chart\jquery.easypiechart.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\jquery\jquery.js" />
+    <Content Include="AreaRestrita\assets\vendor\jquery\jquery.min.js" />
+    <Content Include="AreaRestrita\assets\vendor\linearicons\fonts\Linearicons-Free.svg" />
+    <Content Include="AreaRestrita\assets\vendor\linearicons\style.css" />
+    <Content Include="AreaRestrita\assets\vendor\toastr\toastr.css" />
+    <Content Include="AreaRestrita\assets\vendor\toastr\toastr.js" />
+    <Content Include="AreaRestrita\assets\vendor\toastr\toastr.min.css" />
+    <Content Include="AreaRestrita\assets\vendor\toastr\toastr.min.js" />
+    <Content Include="AreaRestrita\charts.html" />
+    <Content Include="AreaRestrita\Dashboard.aspx" />
+    <Content Include="AreaRestrita\Default_old.aspx" />
+    <Content Include="AreaRestrita\Default.aspx" />
+    <Content Include="AreaRestrita\elements.html" />
+    <Content Include="AreaRestrita\icons.html" />
+    <Content Include="AreaRestrita\images\profiles\avatar.png" />
+    <Content Include="AreaRestrita\index.html" />
+    <Content Include="AreaRestrita\notifications.html" />
+    <Content Include="AreaRestrita\page-lockscreen.html" />
+    <Content Include="AreaRestrita\page-login.html" />
+    <Content Include="AreaRestrita\page-profile.html" />
+    <Content Include="AreaRestrita\panels.html" />
+    <Content Include="AreaRestrita\Profile-Edit.aspx" />
+    <Content Include="AreaRestrita\Profile.aspx" />
+    <Content Include="AreaRestrita\tables.html" />
+    <Content Include="AreaRestrita\typography.html" />
+    <Content Include="bin\Site.dll" />
+    <Content Include="bin\Site.pdb" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\login.css" />
+    <Content Include="Content\Modal\css\component.css" />
+    <Content Include="Content\Modal\css\default.css" />
+    <Content Include="Content\Modal\fonts\codropsicons\codropsicons.svg" />
+    <Content Include="Content\Modal\fonts\codropsicons\license.txt" />
+    <Content Include="Content\Modal\js\classie.js" />
+    <Content Include="Content\Modal\js\css-filters-polyfill.js" />
+    <Content Include="Content\Modal\js\cssParser.js" />
+    <Content Include="Content\Modal\js\modalEffects.js" />
+    <Content Include="Content\Modal\js\modernizr.custom.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="obj\Debug\Portfolio.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Site.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Site.dll" />
+    <Content Include="obj\Debug\Site.pdb" />
+    <Content Include="obj\Debug\_WPPLastBuildInfo.txt" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\csc.exe" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\csi.exe" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\System.AppContext.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Site.dll" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\Site.pdb" />
+    <Content Include="obj\Release\Package\PackageTmp\Default.aspx" />
+    <Content Include="obj\Release\Package\PackageTmp\Default.html" />
+    <Content Include="obj\Release\Package\PackageTmp\Global.asax" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\css\component.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\css\default.css" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\fonts\codropsicons\codropsicons.svg" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\fonts\codropsicons\license.txt" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\index.html" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\js\classie.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\js\css-filters-polyfill.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\js\cssParser.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\js\modalEffects.js" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\js\modernizr.custom.js" />
+    <Content Include="obj\Release\Package\PackageTmp\template\css\animate.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\template\css\bootstrap.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\template\css\font-awesome.min.css" />
+    <Content Include="obj\Release\Package\PackageTmp\template\css\templatemo-style.css" />
+    <Content Include="obj\Release\Package\PackageTmp\template\fonts\fontawesome-webfont.svg" />
+    <Content Include="obj\Release\Package\PackageTmp\template\images\home-bg.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\template\images\portfolio-img1.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\template\images\portfolio-img2.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\template\images\portfolio-img3.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\template\images\portfolio-img4.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\template\images\team-img1.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\template\images\team-img2.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\template\images\team-img3.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\template\images\team-img4.jpg" />
+    <Content Include="obj\Release\Package\PackageTmp\template\js\bootstrap.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\template\js\custom.js" />
+    <Content Include="obj\Release\Package\PackageTmp\template\js\jquery.js" />
+    <Content Include="obj\Release\Package\PackageTmp\template\js\jquery.singlePageNav.min.js" />
+    <Content Include="obj\Release\Package\PackageTmp\template\js\typed.js" />
+    <Content Include="obj\Release\Package\PackageTmp\template\js\wow.min.js" />
+    <Content Include="obj\Release\Site.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Site.dll" />
+    <Content Include="obj\Release\Site.pdb" />
+    <Content Include="obj\Release\_WPPLastBuildInfo.txt" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="obj\Release\CoreCompileInputs.cache" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\csc.exe.config" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\csc.rsp" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\csi.rsp" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\vbc.exe.config" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\vbc.rsp" />
+    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\.DS_Store" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\css\.DS_Store" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\fonts\.DS_Store" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\fonts\codropsicons\.DS_Store" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\fonts\codropsicons\codropsicons.eot" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\fonts\codropsicons\codropsicons.woff" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\js\.DS_Store" />
+    <Content Include="obj\Release\Package\PackageTmp\Modal\README.md" />
+    <Content Include="AreaRestrita\assets\css\demo.css.map" />
+    <Content Include="AreaRestrita\assets\css\main.css.map" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="AreaRestrita\assets\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="AreaRestrita\assets\vendor\chartist\css\chartist-custom.css.map" />
+    <Content Include="AreaRestrita\assets\vendor\chartist\map\chartist.css.map" />
+    <Content Include="AreaRestrita\assets\vendor\chartist\map\chartist.min.js.map" />
+    <Content Include="AreaRestrita\assets\vendor\chartist\scss\chartist.scss" />
+    <Content Include="AreaRestrita\assets\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="AreaRestrita\assets\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="AreaRestrita\assets\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="AreaRestrita\assets\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="AreaRestrita\assets\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="AreaRestrita\assets\vendor\jquery\jquery.min.map" />
+    <Content Include="AreaRestrita\assets\vendor\linearicons\fonts\Linearicons-Free.eot" />
+    <Content Include="AreaRestrita\assets\vendor\linearicons\fonts\Linearicons-Free.ttf" />
+    <Content Include="AreaRestrita\assets\vendor\linearicons\fonts\Linearicons-Free.woff" />
+    <Content Include="AreaRestrita\assets\vendor\linearicons\fonts\Linearicons-Free.woff2" />
+    <Content Include="AreaRestrita\AreaRestrita.Master" />
+    <Content Include="obj\Debug\CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Site.csproj.CopyComplete" />
+    <Content Include="obj\Debug\Site.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\Site.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\Package\PackageTmp\packages.config" />
+    <Content Include="obj\Release\Package\PackageTmp\template\fonts\fontawesome-webfont.eot" />
+    <Content Include="obj\Release\Package\PackageTmp\template\fonts\fontawesome-webfont.ttf" />
+    <Content Include="obj\Release\Package\PackageTmp\template\fonts\fontawesome-webfont.woff" />
+    <Content Include="obj\Release\Package\PackageTmp\template\fonts\fontawesome-webfont.woff2" />
+    <Content Include="obj\Release\Package\PackageTmp\template\fonts\FontAwesome.otf" />
+    <Content Include="obj\Release\Package\PackageTmp\Web.config" />
+    <Content Include="obj\Release\Site.csproj.CopyComplete" />
+    <Content Include="obj\Release\Site.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Release\TransformWebConfig\assist\Web.config" />
+    <Content Include="obj\Release\TransformWebConfig\original\Web.config" />
+    <Content Include="obj\Release\TransformWebConfig\transformed\Web.config" />
+    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Content\template\css\animate.min.css" />
+    <Content Include="Content\template\css\bootstrap.min.css" />
+    <Content Include="Content\template\css\font-awesome.min.css" />
+    <Content Include="Content\template\css\templatemo-style.css" />
+    <Content Include="Content\template\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\template\images\home-bg.jpg" />
+    <Content Include="Content\template\images\notebook.jpg" />
+    <Content Include="Content\template\images\office.jpg" />
+    <Content Include="Content\template\images\portfolio-img1.jpg" />
+    <Content Include="Content\template\images\portfolio-img2.jpg" />
+    <Content Include="Content\template\images\portfolio-img3.jpg" />
+    <Content Include="Content\template\images\portfolio-img4.jpg" />
+    <Content Include="Content\template\images\soft.jpg" />
+    <Content Include="Content\template\images\team-img1.jpg" />
+    <Content Include="Content\template\images\team-img2.jpg" />
+    <Content Include="Content\template\images\team-img3.jpg" />
+    <Content Include="Content\template\images\team-img4.jpg" />
+    <Content Include="Content\template\images\thiers.jpg" />
+    <Content Include="Content\template\js\bootstrap.min.js" />
+    <Content Include="Content\template\js\custom.js" />
+    <Content Include="Content\template\js\jquery.js" />
+    <Content Include="Content\template\js\jquery.singlePageNav.min.js" />
+    <Content Include="Content\template\js\typed.js" />
+    <Content Include="Content\template\js\wow.min.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Content\template\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\template\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\template\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\template\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\template\fonts\FontAwesome.otf" />
+    <Content Include="Content\Modal\css\.DS_Store" />
+    <Content Include="Content\Modal\fonts\.DS_Store" />
+    <Content Include="Content\Modal\fonts\codropsicons\.DS_Store" />
+    <Content Include="Content\Modal\fonts\codropsicons\codropsicons.eot" />
+    <Content Include="Content\Modal\fonts\codropsicons\codropsicons.ttf" />
+    <Content Include="Content\Modal\fonts\codropsicons\codropsicons.woff" />
+    <Content Include="Content\Modal\.DS_Store" />
+    <Content Include="Content\Modal\js\.DS_Store" />
+    <Content Include="Content\Modal\README.md" />
+    <None Include="Properties\PublishProfiles\LocalPublish.pubxml" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Data\Conexao.Cs" />
+    <Compile Include="App_Data\Usuario.Cs" />
+    <Compile Include="AreaRestrita\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreaRestrita\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AreaRestrita\Default_old.aspx.cs">
+      <DependentUpon>Default_old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreaRestrita\Default_old.aspx.designer.cs">
+      <DependentUpon>Default_old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AreaRestrita\AreaRestrita.Master.cs">
+      <DependentUpon>AreaRestrita.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreaRestrita\AreaRestrita.Master.designer.cs">
+      <DependentUpon>AreaRestrita.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AreaRestrita\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreaRestrita\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AreaRestrita\Profile-Edit.aspx.cs">
+      <DependentUpon>Profile-Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreaRestrita\Profile-Edit.aspx.designer.cs">
+      <DependentUpon>Profile-Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AreaRestrita\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AreaRestrita\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="obj\Debug\Package\" />
+    <Folder Include="obj\Debug\ProfileTransformWebConfig\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Debug\TransformWebConfig\" />
+    <Folder Include="obj\Release\ProfileTransformWebConfig\transformed\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50149</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4356/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.9.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.9.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
