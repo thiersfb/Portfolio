@@ -197,7 +197,7 @@
                     <p><i class="fa fa-phone"></i><span>Phone</span>010-020-0340</p>
                 </div>
                 <div class="col-md-3 col-sm-4 col-xs-12">
-                    <p><i class="fa fa-envelope-o"></i><span>Email</span><a href="#">awesome@company.com</a></p>
+                    <p><i class="fa fa-envelope-o"></i><span>Email</span><a href="#">email@domain.com</a></p>
                 </div>
                 <div class="col-md-5 col-sm-4 col-xs-12">
                     <ul class="social-icon">
