@@ -17,13 +17,14 @@ namespace dados
 
         //note sgs
         //public String conexao = @"Data Source=BR862L1CBKZ9\SQLEXPRESS;Initial Catalog=projeto;Integrated Security=True";
-        //public String conexao = @"Data Source = BR862L1CBKZ9\SQLEXPRESS;Initial Catalog = projeto;User ID = thiersfb; Password=thiers07";
+        //public String conexao = @"Data Source=BR862L1CBKZ9\SQLEXPRESS;Initial Catalog = projeto;User ID = thiersfb; Password=thiers07";
+
+        //note ingram
+        //public String conexao = @"Data Source=BRBAWLAP033065\SQLEXPRESS;Initial Catalog=projeto;Integrated Security=True";
 
         //note pessoal
         //public String conexao = @"Data Source=THIERS-DELL\SQLSERVER;Initial Catalog=projeto;Integrated Security=True";
-
         public String conexao = @"Data Source=THIERS-DELL\SQLSERVER;Initial Catalog=projeto;User ID=thiersfb;Password=thiers07;Connect Timeout=10500";
-        //public String conexao = @"Data Source = THIERS - DELL\SQLSERVER;Initial Catalog = projeto; Persist Security Info=True;User ID = thiersfb; Password=thiers07";
 
         SqlDataAdapter da;
         DataSet ds;
